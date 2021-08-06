@@ -11,21 +11,26 @@ function App() {
 
     const [description, setDescription] = useState('')
 
-    const createTodo = event => {
+    const handleDescriptionChange = event => {
         const description = event.target.value
         setDescription(description)
     }
 
 
     useEffect(getTodoService, [])
-    useEffect(postTodoService(description), [createTodo])
 
+
+    function createToDo() {
+       postTodoService(description)
+    }
 
     return (
         <div className="TodoApp">
             <Header className="Header"/>
 
-            <input type="text" onChange={createTodo}/>
+
+            <input type="text" onChange={handleDescriptionChange}/>
+            <button onClick={createToDo}></button>
 
             <StatusField className= "StatusField"/>
         </div>

@@ -12,13 +12,15 @@ export function getTodoService() {
 }
 
 export function postTodoService(description) {
-
-    return axios.post("/api/todo", {description:description})
+    console.log(description)
+    return axios.post("/api/todo", {description})
         .then(function(response){
             console.log(response)
         })
+        .then(getTodoService)
         .catch(function (error){
             console.log(error)
         })
+
 
         }
