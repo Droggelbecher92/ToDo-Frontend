@@ -1,13 +1,13 @@
 header{
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background-color: #61dafb;
-
+    display: flex;
 }
 
-.HeaderImage{
-    width: 90%
+.HeaderImage {
+    width: 100px;
+    height: 100px;
 }
 
 h1{

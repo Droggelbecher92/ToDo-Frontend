@@ -1,0 +1,23 @@
+html, body{
+    margin: 0;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+.TodoApp {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 50px 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+    "Header Header Header"
+    "search-input-field search-input-field search-input-field"
+    "open in-progress done";
+  }
+.Header { grid-area: Header; }
+.search-input-field { grid-area: search-input-field; }
+.open { grid-area: open; }
+.in-progress { grid-area: in-progress; }
+.done { grid-area: done; }
