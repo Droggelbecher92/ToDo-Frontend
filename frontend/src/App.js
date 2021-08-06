@@ -2,16 +2,18 @@ import './App.css';
 import './components/Header.js'
 import {Header} from "./components/Header";
 import {StatusField} from "./components/StatusField";
+import {GetTodoService} from "./service/TodoService";
+import {useEffect} from "react";
 
-function InputField(props) {
-    return null;
-}
+
 
 function App() {
+
+    useEffect(GetTodoService, [])
     return (
         <div className="TodoApp">
             <Header className="Header"/>
-            <InputField className="InputField"/>
+
             <StatusField className= "StatusField"/>
         </div>
     );
